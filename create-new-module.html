@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6aa02440b9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body class="bg-body-tertiary">
+    <header class="container-fluid px-0 z-1">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="./assets/logo.svg" alt="logo">
+                </a>
+                <form class="d-none d-md-block shadow-sm rounded-4 overflow-hidden" role="search">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-0">
+                            <img src="./assets/search.svg" alt="search">
+                        </span>
+                        <input type="search" class="form-control border-0" placeholder="Учебные модули, учебники"
+                            aria-label="Search">
+                        <button class="btn bg-white border-start px-3" type="submit">Поиск</button>
+                    </div>
+                </form>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-grow-0 bg-md-white px-3 py-4 p-lg-0"
+                    id="navbarSupportedContent">
+                    <form class="d-md-none shadow-sm rounded-4 overflow-hidden mb-3" role="search">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white border-0">
+                                <img src="./assets/search.svg" alt="search">
+                            </span>
+                            <input type="search" class="form-control border-0" placeholder="Учебные модули, учебники"
+                                aria-label="Search">
+                            <button class="btn bg-white border-start px-3" type="submit">Поиск</button>
+                        </div>
+                    </form>
+                    <div class="d-inline-block d-flex text-nowrap align-items-center ms-3 mb-4 mb-lg-0">
+                        <span class="fw-medium">Язык сайта:</span>
+                        <select
+                            class="form-select form-select-md w-fit-content border-0 bg-transparent d-inline-block pe-1"
+                            aria-label="Large select example">
+                            <option selected value="ru">Русский</option>
+                            <option value="en">Англиский</option>
+                            <option value="uk">Украинский</option>
+                        </select>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row">
+                        <button type="button" class="btn px-3 py-2">Войти</button>
+                        <button type="button" class="btn bg-lime px-3 py-2">Зарегестрироваться</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container py-4">
+            <div class="d-flex justify-content-between bg-light py-3 position-sticky top-0 left-0 z-3">
+                <h3 class="fw-semibold">Создание модуля</h3>
+                <div class="d-none d-md-block">
+                    <button class="btn px-4 py-2 me-3 inset-shadow-lime-2">Параметры</button>
+                    <button class="btn px-4 py-2 bg-lime border-0">Создать</button>
+                </div>
+            </div>
+            <form action="" class="max-w-md-50 mb-5">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="Название модуля">
+                    <label for="email">Название модуля</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="password" placeholder="Описание">
+                    <label for="password">Описание</label>
+                </div>
+            </form>
+            <div>
+                <div class="bg-white shadow-sm rounded">
+                    <div
+                        class="d-flex align-items-center justify-content-between px-4 py-1 border-bottom border-lime border-2">
+                        <b>1</b>
+                        <div>
+                            <button class="btn text-body-tertiary">
+                                <i class="fa-solid fa-grip-lines"></i>
+                            </button>
+                            <button class="btn">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="d-md-flex py-3 px-3 px-md-5">
+                        <label class="me-4">
+                            <button class="btn cube-3 bg-light rounded border">
+                                <img src="./assets/blank-image.svg" alt="term-image" class="img-fluid">
+                            </button>
+                            <input type="file" class="d-none">
+                        </label>
+                        <div class="form-floating align-self-center me-2 my-3 w-100">
+                            <input type="text" class="form-control w-100" id="term" placeholder="Термин">
+                            <label for="term">Термин</label>
+                        </div>
+                        <div class="form-floating align-self-center me-2 my-3 w-100">
+                            <input type="text" class="form-control w-100" id="translation" placeholder="Перевод">
+                            <label for="translation">Перевод</label>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn fs-4 bg-white shadow-sm rounded w-100 py-5 mt-4">
+                    Добавить карточку
+                    <i class="fa-solid fa-plus ms-3"></i>
+                </button>
+            </div>
+            <button class="btn px-5 py-3 bg-lime d-block ms-auto mt-4 w-100 w-md-fit-content">Создать</button>
+        </section>
+    </main>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top container">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="my-3 me-2 me-sm-0">
+                <img src="./assets/logo.svg" alt="logo">
+            </a>
+        </div>
+        <div class="my-3">
+            <ul class="nav list-unstyled">
+                <li class="me-3">
+                    <a class="text-muted" href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li class="me-3">
+                    <a class="text-muted" href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="me-3">
+                    <a class="text-muted" href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="me-3">
+                    <a class="text-muted" href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="d-block mt-2 mb-0 text-muted">© 2023 EasyLang. Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
